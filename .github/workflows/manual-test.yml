@@ -1,0 +1,14 @@
+name: Manual Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  manual-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print context
+        run: |
+          echo "Manual workflow started"
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Ref: $GITHUB_REF"
